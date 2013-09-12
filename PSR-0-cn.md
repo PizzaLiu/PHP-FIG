@@ -7,8 +7,8 @@
 `\<Vendor Name>\(<Namespace>\)*<Class Name>`；
 * 其中"Vendor Name"为每个命名空间都必须隶属的一个顶级的组织名称；
 * 需要的话，每个命名空间下面可以拥有多个子命名空间；
-* 当从文件系统载入源文件时，每个命名空间之间的分隔符都要转换成文件夹分隔符 `DIRECTORY_SEPARATOR`；
-* `_` 字符在命名空间中是无实际意义的，所以类名称中的每个 `_` 字符也都要转换成文件夹分隔符 `DIRECTORY_SEPARATOR`；
+* 当从文件系统载入源文件时，每个命名空间之间的分隔符都要转换成文件夹分隔符 (`DIRECTORY_SEPARATOR`) ；
+* `_` 字符在命名空间中是无实际意义的，所以从文件系统载入源文件时，类名称中的每个 `_` 字符也都要转换成文件夹分隔符 (`DIRECTORY_SEPARATOR`) ；
 * 从文件系统载入的标准的命名空间以及类文件，都需要以 `.php` 为文件后缀；
 * 组织名称、命名空间 以及 类 的名称可以由任意大小写字母组成。
 
@@ -56,6 +56,7 @@ function autoload($className)
 
 SplClassLoader 实例
 -----------------------------
-以下的 gist 是 一个 SplClassLoader 类文件的实例，如果你遵循了以上规范，它可以用来载入你的类文件。
+以下的 gist 是 一个 SplClassLoader 类文件的实例，如果你遵循了以上规范，可以把它用来载入你的类文件。
 这是目前 PHP 5.3 建议的类文件载入方式。
+
 * [http://gist.github.com/221634](http://gist.github.com/221634)
