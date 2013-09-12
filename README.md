@@ -5,10 +5,12 @@ PHP编码规范（中文版）导读
 翻译过程中参照了 [莫希爾(Mosil)手札][] 的繁体中文版，以及 [Corrie Zhao][] 组织翻译的简体中文版，个人觉得以上两个版本都有不同程度的语句不通等毛病，所以有了这个版本。
 译文中为了让语句通顺，便于理解，没有对原文逐字翻译，个别语句与原文原意可能略有偏差，希望告知和指正。
 
-- [PSR-0](https://github.com/hfcorriez/fig-standards/blob/zh_CN/接受/PSR-0.md)
-  - [PSR-1](https://github.com/hfcorriez/fig-standards/blob/zh_CN/接受/PSR-1-basic-coding-standard.md)
-  - [PSR-2](https://github.com/hfcorriez/fig-standards/blob/zh_CN/接受/PSR-2-coding-style-guide.md)
-  - [PSR-3](https://github.com/hfcorriez/fig-standards/blob/zh_CN/接受/PSR-3-logger-interface.md)
+目前已制定的规范包括以下四个文件：
+
+  - [PSR-0](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-0-cn.md)
+  - [PSR-1](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-1-basic-coding-standard-cn.md)
+  - [PSR-2](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-2-coding-style-guide-cn.md)
+  - [PSR-3](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-3-logger-interface-cn.md)
 
 以下是原版的导读：
 
