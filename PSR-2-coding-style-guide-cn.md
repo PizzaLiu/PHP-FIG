@@ -251,7 +251,7 @@ class ClassName
 {
     public function foo($arg1, &$arg2, $arg3 = [])
     {
-        // method body
+        // 方法主体
     }
 }
 ```
@@ -271,7 +271,7 @@ class ClassName
         &$arg2,
         array $arg3 = []
     ) {
-        // method body
+        // 方法主体
     }
 }
 ```
@@ -293,7 +293,7 @@ abstract class ClassName
 
     final public static function bar()
     {
-        // method body
+        // 方法主体
     }
 }
 ```
