@@ -1,21 +1,21 @@
-编码风格指南
+代码风格规范
 ==================
 
-本指南是 [PSR-1][] 基本编码规范的继承与扩展。
+本篇规范是 [PSR-1][] 基本代码规范的继承与扩展。
 
-本指南的目的是，通过制定一系列规范化PHP代码的规则，减少在浏览不同作者的代码时的认知差异。
+本篇规范希望通过制定一系列规范化PHP代码的规则，减少在浏览不同作者的代码时，因代码风格的不同而造成不便。
 
-本指南的风格规范源自于多个不同项目的共同特性。
+本文中的风格规范源自于多个不同项目代码风格的共同特性。
 当多名程序员在多个项目中合作时，就需要一个共同的编码规范。
-因此，本指南的价值在于我们都遵循这个编码风格，而不是在于它本身。
+因此，本规范的价值在于我们都遵循这个编码风格，而不是在于它本身。
 
-关键词 “必须/一定”("MUST")、“一定不/不应”("MUST NOT")、“需要”("REQUIRED")、
+关键词 “必须/一定/一定要”("MUST")、“一定不/不应/一定不能/一定不可”("MUST NOT")、“需要”("REQUIRED")、
 “将会/要”("SHALL")、“不会/不要”("SHALL NOT")、“应该”("SHOULD")、“不该”("SHOULD NOT")、
 “推荐”("RECOMMENDED")、“可以”("MAY")和”可选“("OPTIONAL")的详细描述可参见[RFC 2119][]。
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
-[PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+[PSR-0]: https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-0-cn.md
+[PSR-1]: https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-1-basic-coding-standard-cn.md
 
 
 1. 概览
@@ -23,11 +23,11 @@
 
 - 代码 必须 遵循 [PSR-1][] 。
 
-- 代码 必须 使用4个空格符而不是tab进行缩进。
+- 代码 必须 使用4个空格符而不是 tab键 进行缩进。
 
 - 每行的字符数  应该 保持在80个之内， 理论上 一定 不可多于120个， 但 不应 强做限制。
 
-- 每个 `namespace` 命名空间声明和 `use` 声明语句后面，必须 插入一个空白行。
+- 每个 `namespace` 命名空间声明语句和 `use` 声明语句块后面，必须 插入一个空白行。
 
 - 类的开始花括号 必须 写在函数声明后自成一行，结束花括号也 必须 写在函数主体后自成一行。
 
@@ -37,7 +37,7 @@
    `abstract` 以及 `final`  必须 是声明在作用域之前；
    而 `static` 必须 是声明在作用域之后。
 
-- 控制结构的名称后 必须 要有一个空格符，而方法与函数调用则 不应 有。
+- 控制结构的名称后 必须 要有一个空格符，而编写方法或调用函数时则 一定不能 有。
 
 - 控制结构的开始花括号 必须 写在声明的同一行，而结束花括号 必须 写在主体后自成一行。
 
@@ -84,7 +84,7 @@ class Foo extends Bar implements FooInterface
 
 ### 2.2 文件
 
-所有 PHP 文件 必须 使用 Unix LF (linefeed) 作为行的终止。
+所有 PHP 文件 必须 使用 Unix LF (linefeed) 作为行的结束符。
 
 所有 PHP 文件 必须 以一个空白行作为结束。
 
@@ -94,7 +94,7 @@ class Foo extends Bar implements FooInterface
 
 行的长度 不应 有强制的约束。
 
-理论上行的长度 一定 要限制在120个字符以内，若超过此长度，代码规范检查器 一定 要发出警告，不过 一定不 可发出错误提示。
+理论上行的长度 一定 要限制在120个字符以内，若超过此长度，带代码规范检查的编辑器 一定要 发出警告，不过 一定不可 发出错误提示。
 
 每行尽量 不要 多于80个字符，大于80字符的行 要 折成多行。 
 
@@ -106,11 +106,11 @@ class Foo extends Bar implements FooInterface
 
 ### 2.4. 缩进
 
-代码 必须 使用4个空格符的缩进，必须不 能用tab。
+代码 必须 使用4个空格符的缩进，一定不能 用 tab键 。
 
-> 备注: 使用空格而不与tab混淆的好处在于
-> 避免在比较异同、打补丁、历史回顾以及注释时产生混淆。并且，使用空格缩进
-> 让对齐变得更方便。
+> 备注: 使用空格而不是tab键缩进的好处在于，
+> 避免在比较代码差异、打补丁、重阅代码以及注释时产生混淆。
+> 并且，使用空格缩进，让对齐变得更方便。
 
 ### 2.5. 关键字 以及 True/False/Null
 
@@ -131,7 +131,7 @@ PHP所有 [关键字][] 必须 全部小写。
 
 每条 `use` 声明语句 必须 只有一个 `use` 关键词。
 
-`use` 代码段后 必须 要有一个空白行。
+`use` 声明语句块后 必须 要有一个空白行。
 
 例如：
 
@@ -196,9 +196,9 @@ class ClassName extends ParentClass implements
 
 每个属性都 必须 声明作用域。
 
-声明一个属性前 一定不 能使用关键字 `var` 。
+声明一个属性前 一定不可 使用关键字 `var` 。
 
-每行语句 一定不 可定义超过一个属性。
+每行语句 一定不可 定义超过一个属性。
 
 不要 使用下划线作为前缀，来区分 protected 或 private。
 
@@ -302,7 +302,7 @@ abstract class ClassName
 
 方法及函数调用时，方法名或函数名与参数左括号之间 一定不 能有空格，
 参数右括号前也 一定不 能有空格。
-每个参数前 一定不 能有空格，而其后 必须 有一个空格。
+每个参数前 一定不 能有空格，但其后 必须 有一个空格。
 
 ```php
 <?php
@@ -328,11 +328,11 @@ $foo->bar(
 控制结构的基本规范如下：
 
 - 控制结构关键词后 必须 有一个空格。
-- 开始括号后 必须不 能有空格。
-- 结束括号前也 必须不 能有空格。
-- 结束括号与开始花括号间 必须 有一个空格。
-- 结构体主体 必须 要有一次缩进。
-- 结束花括号 必须 在结构体主体后单独成行。
+- 左括号 `(` 后 一定不能 有空格。
+- 右括号 `)` 前也 一定不 能有空格。
+- 右括号 `)` 与开始花括号 `{` 间 一定 有一个空格。
+- 结构体主体 一定 要有一次缩进。
+- 结束花括号 `}` 一定 在结构体主体后单独成行。
 
 每个结构体的主体都 必须 被包含在成对的花括号之中。
 这能让结构体更加结构话，以及减少加入新行时，出错的可能性。
@@ -360,7 +360,7 @@ if ($expr1) {
 
 标准的 `switch` 结构如下代码所示，留意 括号、空格以及花括号的位置。
 `case` 语句 必须 相对 `switch` 进行一次缩进，而 `break` 语句以及 `case` 内的其它语句都 必须 相对 `case` 进行一次缩进。
-在存在非空的 `case` 直穿语句时，主体里必须有类似 `// no break` 的注释。
+如果存在非空的 `case` 直穿语句，主体里必须有类似 `// no break` 的注释。
 
 ```php
 <?php
@@ -445,7 +445,7 @@ try {
 闭包声明时，关键词 `function` 后 以及 关键词 `use` 的前后都 必须 要有一个空格。
 开始花括号 必须 写在声明的同一行，结束花括号 必须 紧跟主体结束的下一行。
 
-参数列表和变量列表的左括号后以及右括号前，必须不 能有空格。
+参数列表和变量列表的左括号后以及右括号前，必须不能 有空格。
 参数和变量列表中，逗号前 必须不 能有空格，而逗号后 必须 要有空格。
 闭包中有默认值的参数 必须 放到列表的后面。
 
@@ -545,40 +545,40 @@ $foo->bar(
 
 - 最佳实践
 
-本指南之后的修订与扩展将弥补以上不足。
+本规范之后的修订与扩展将弥补以上不足。
 
 
 附录 A. 问卷调查
 ------------------
 
-为了编写本指南，小组制定了调查问卷，用来统计各成员项目的共同规范。
+为了编写本规范，小组制定了调查问卷，用来统计各成员项目的共同规范。
 以下是此问卷调查的数据，在此供查阅。
 
 ### A.1. 问卷数据
 
-url,http://www.horde.org/apps/horde/docs/CODING_STANDARDS,http://pear.php.net/manual/en/standards.php,http://solarphp.com/manual/appendix-standards.style,http://framework.zend.com/manual/en/coding-standard.html,http://symfony.com/doc/2.0/contributing/code/standards.html,http://www.ppi.io/docs/coding-standards.html,https://github.com/ezsystems/ezp-next/wiki/codingstandards,http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html,https://github.com/UnionOfRAD/lithium/wiki/Spec%3A-Coding,http://drupal.org/coding-standards,http://code.google.com/p/sabredav/,http://area51.phpbb.com/docs/31x/coding-guidelines.html,https://docs.google.com/a/zikula.org/document/edit?authkey=CPCU0Us&hgd=1&id=1fcqb93Sn-hR9c0mkN6m_tyWnmEvoswKBtSc0tKkZmJA,http://www.chisimba.com,n/a,https://github.com/Respect/project-info/blob/master/coding-standards-sample.php,n/a,Object Calisthenics for PHP,http://doc.nette.org/en/coding-standard,http://flow3.typo3.org,https://github.com/propelorm/Propel2/wiki/Coding-Standards,http://developer.joomla.org/coding-standards.html
-voting,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,no,?,yes,no,yes
-indent_type,4,4,4,4,4,tab,4,tab,tab,2,4,tab,4,4,4,4,4,4,tab,tab,4,tab
-line_length_limit_soft,75,75,75,75,no,85,120,120,80,80,80,no,100,80,80,?,?,120,80,120,no,150
-line_length_limit_hard,85,85,85,85,no,no,no,no,100,?,no,no,no,100,100,?,120,120,no,no,no,no
-class_names,studly,studly,studly,studly,studly,studly,studly,studly,studly,studly,studly,lower_under,studly,lower,studly,studly,studly,studly,?,studly,studly,studly
-class_brace_line,next,next,next,next,next,same,next,same,same,same,same,next,next,next,next,next,next,next,next,same,next,next
-constant_names,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper
-true_false_null,lower,lower,lower,lower,lower,lower,lower,lower,lower,upper,lower,lower,lower,upper,lower,lower,lower,lower,lower,upper,lower,lower
-method_names,camel,camel,camel,camel,camel,camel,camel,camel,camel,camel,camel,lower_under,camel,camel,camel,camel,camel,camel,camel,camel,camel,camel
-method_brace_line,next,next,next,next,next,same,next,same,same,same,same,next,next,same,next,next,next,next,next,same,next,next
-control_brace_line,same,same,same,same,same,same,next,same,same,same,same,next,same,same,next,same,same,same,same,same,same,next
-control_space_after,yes,yes,yes,yes,yes,no,yes,yes,yes,yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
-always_use_control_braces,yes,yes,yes,yes,yes,yes,no,yes,yes,yes,no,yes,yes,yes,yes,no,yes,yes,yes,yes,yes,yes
-else_elseif_line,same,same,same,same,same,same,next,same,same,next,same,next,same,next,next,same,same,same,same,same,same,next
-case_break_indent_from_switch,0/1,0/1,0/1,1/2,1/2,1/2,1/2,1/1,1/1,1/2,1/2,1/1,1/2,1/2,1/2,1/2,1/2,1/2,0/1,1/1,1/2,1/2
-function_space_after,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
-closing_php_tag_required,no,no,no,no,no,no,no,no,yes,no,no,no,no,yes,no,no,no,no,no,yes,no,no
-line_endings,LF,LF,LF,LF,LF,LF,LF,LF,?,LF,?,LF,LF,LF,LF,?,,LF,?,LF,LF,LF
-static_or_visibility_first,static,?,static,either,either,either,visibility,visibility,visibility,either,static,either,?,visibility,?,?,either,either,visibility,visibility,static,?
-control_space_parens,no,no,no,no,no,no,yes,no,no,no,no,no,no,yes,?,no,no,no,no,no,no,no
-blank_line_after_php,no,no,no,no,yes,no,no,no,no,yes,yes,no,no,yes,?,yes,yes,no,yes,no,yes,no
-class_method_control_brace,next/next/same,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/next,same/same/same,same/same/same,same/same/same,same/same/same,next/next/next,next/next/same,next/same/same,next/next/next,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/same,next/next/next
+    url,http://www.horde.org/apps/horde/docs/CODING_STANDARDS,http://pear.php.net/manual/en/standards.php,http://solarphp.com/manual/appendix-standards.style,http://framework.zend.com/manual/en/coding-standard.html,http://symfony.com/doc/2.0/contributing/code/standards.html,http://www.ppi.io/docs/coding-standards.html,https://github.com/ezsystems/ezp-next/wiki/codingstandards,http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html,https://github.com/UnionOfRAD/lithium/wiki/Spec%3A-Coding,http://drupal.org/coding-standards,http://code.google.com/p/sabredav/,http://area51.phpbb.com/docs/31x/coding-guidelines.html,https://docs.google.com/a/zikula.org/document/edit?authkey=CPCU0Us&hgd=1&id=1fcqb93Sn-hR9c0mkN6m_tyWnmEvoswKBtSc0tKkZmJA,http://www.chisimba.com,n/a,https://github.com/Respect/project-info/blob/master/coding-standards-sample.php,n/a,Object Calisthenics for PHP,http://doc.nette.org/en/coding-standard,http://flow3.typo3.org,https://github.com/propelorm/Propel2/wiki/Coding-Standards,http://developer.joomla.org/coding-standards.html
+    voting,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,no,?,yes,no,yes
+    indent_type,4,4,4,4,4,tab,4,tab,tab,2,4,tab,4,4,4,4,4,4,tab,tab,4,tab
+    line_length_limit_soft,75,75,75,75,no,85,120,120,80,80,80,no,100,80,80,?,?,120,80,120,no,150
+    line_length_limit_hard,85,85,85,85,no,no,no,no,100,?,no,no,no,100,100,?,120,120,no,no,no,no
+    class_names,studly,studly,studly,studly,studly,studly,studly,studly,studly,studly,studly,lower_under,studly,lower,studly,studly,studly,studly,?,studly,studly,studly
+    class_brace_line,next,next,next,next,next,same,next,same,same,same,same,next,next,next,next,next,next,next,next,same,next,next
+    constant_names,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper,upper
+    true_false_null,lower,lower,lower,lower,lower,lower,lower,lower,lower,upper,lower,lower,lower,upper,lower,lower,lower,lower,lower,upper,lower,lower
+    method_names,camel,camel,camel,camel,camel,camel,camel,camel,camel,camel,camel,lower_under,camel,camel,camel,camel,camel,camel,camel,camel,camel,camel
+    method_brace_line,next,next,next,next,next,same,next,same,same,same,same,next,next,same,next,next,next,next,next,same,next,next
+    control_brace_line,same,same,same,same,same,same,next,same,same,same,same,next,same,same,next,same,same,same,same,same,same,next
+    control_space_after,yes,yes,yes,yes,yes,no,yes,yes,yes,yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
+    always_use_control_braces,yes,yes,yes,yes,yes,yes,no,yes,yes,yes,no,yes,yes,yes,yes,no,yes,yes,yes,yes,yes,yes
+    else_elseif_line,same,same,same,same,same,same,next,same,same,next,same,next,same,next,next,same,same,same,same,same,same,next
+    case_break_indent_from_switch,0/1,0/1,0/1,1/2,1/2,1/2,1/2,1/1,1/1,1/2,1/2,1/1,1/2,1/2,1/2,1/2,1/2,1/2,0/1,1/1,1/2,1/2
+    function_space_after,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
+    closing_php_tag_required,no,no,no,no,no,no,no,no,yes,no,no,no,no,yes,no,no,no,no,no,yes,no,no
+    line_endings,LF,LF,LF,LF,LF,LF,LF,LF,?,LF,?,LF,LF,LF,LF,?,,LF,?,LF,LF,LF
+    static_or_visibility_first,static,?,static,either,either,either,visibility,visibility,visibility,either,static,either,?,visibility,?,?,either,either,visibility,visibility,static,?
+    control_space_parens,no,no,no,no,no,no,yes,no,no,no,no,no,no,yes,?,no,no,no,no,no,no,no
+    blank_line_after_php,no,no,no,no,yes,no,no,no,no,yes,yes,no,no,yes,?,yes,yes,no,yes,no,yes,no
+    class_method_control_brace,next/next/same,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/next,same/same/same,same/same/same,same/same/same,same/same/same,next/next/next,next/next/same,next/same/same,next/next/next,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/same,next/next/next
 
 ### A.2. 问卷说明
 
