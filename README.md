@@ -12,8 +12,11 @@ PHP编码规范（中文版）导读
   - [PSR-2](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-2-coding-style-guide-cn.md)
   - [PSR-2补充](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-2-coding-style-guide-meta-cn.md)
   - [PSR-3](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-3-logger-interface-cn.md)
-  
-以下是原版的导读：
+
+
+
+2014/04/25    添加`PSR-2补充`文件以及修改之前版本中的翻译不当与错误。
+
 
 [PHP-FIG]: https://github.com/php-fig/
 [PSR]: https://github.com/php-fig/fig-standards
@@ -21,7 +24,8 @@ PHP编码规范（中文版）导读
 [Corrie Zhao]: https://github.com/hfcorriez/fig-standards
 
 
-- 2014/04/25    添加`PSR-2补充`文件以及修改之前版本中的翻译不当与错误。
+以下是原版的导读：
+
 ---------------
 
 PHP互操作性框架制定小组
