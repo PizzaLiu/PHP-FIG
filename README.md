@@ -12,11 +12,12 @@ PHP编码规范（中文版）导读
   - [PSR-2](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-2-coding-style-guide-cn.md)
   - [PSR-2补充](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-2-coding-style-guide-meta-cn.md)
   - [PSR-3](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-3-logger-interface-cn.md)
+  - [PSR-4](https://github.com/PizzaLiu/PHP-FIG/blob/master/PSR-4-autoloader-cn.md)
 
 
 
 2014/04/25    添加`PSR-2补充`文件以及修改之前版本中的翻译不当与错误。
-
+2014/07/31    添加`PSR-4`。
 
 [PHP-FIG]: https://github.com/php-fig/
 [PSR]: https://github.com/php-fig/fig-standards
