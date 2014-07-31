@@ -16,8 +16,8 @@ PHP编码规范（中文版）导读
 
 
 
-2014/04/25    添加`PSR-2补充`文件以及修改之前版本中的翻译不当与错误。
-2014/07/31    添加`PSR-4`。
+- 2014/04/25    添加`PSR-2补充`文件以及修改之前版本中的翻译不当与错误。
+- 2014/07/31    添加`PSR-4`。
 
 [PHP-FIG]: https://github.com/php-fig/
 [PSR]: https://github.com/php-fig/fig-standards
