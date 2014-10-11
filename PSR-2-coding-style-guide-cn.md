@@ -33,7 +33,7 @@
 
 - 方法的开始花括号(`{`)**必须**写在函数声明后自成一行，结束花括号(`}`)也**必须**写在函数主体后自成一行。
 
-- 类的属性和方法**必须**声明其可见性（`private`、`protected` 以及 `public`）， `abstract` 以及 `final` **必须**声明在可见性之前，而 `static` **必须**声明在可见性之后。
+- 类的属性和方法**必须**添加访问修饰符（`private`、`protected` 以及 `public`）， `abstract` 以及 `final` **必须**声明在访问修饰符之前，而 `static` **必须**声明在访问修饰符之后。
   
 - 控制结构的关键字后**必须**要有一个空格符，而调用方法或函数时则**一定不能**有。
 
@@ -192,7 +192,7 @@ class ClassName extends ParentClass implements
 
 ### 4.2. 属性
 
-每个属性都**必须**声明其可见性。
+每个属性都**必须**添加访问修饰符。
 
 **一定不可**使用关键字 `var` 声明一个属性。
 
@@ -214,7 +214,7 @@ class ClassName
 
 ### 4.3. 方法
 
-所有方法都**必须**声明其可见性。
+所有方法都**必须**添加访问修饰符。
 
 **不要**使用下划线作为前缀，来区分方法是 protected 或 private。
 
@@ -276,7 +276,7 @@ class ClassName
 
 ### 4.5. `abstract` 、 `final` 、 以及 `static`
 
-需要时，关键词 `abstract` 和 `final`， 必须 在可见性前声明，而 `static` 则 必须 声明在可见性后。
+需要添加 `abstract` 或 `final` 声明时， **必须**写在访问修饰符前，而 `static` 则**必须**写在其后。
 
 ```php
 <?php
@@ -636,7 +636,7 @@ $foo->bar(
 选择哪种类型的行结束符？
 
 `static_or_visibility_first`:
-声明一个方法时，`static` 在前还是可见性在前？
+声明一个静态方法时，`static` 是写访问修饰符前还是后？
 
 `control_space_parens`:
 控制结构里，左括号后以及右括号前是否有空格？`yes` = `if ( $expr )`, `no` = `if ($expr)`.
