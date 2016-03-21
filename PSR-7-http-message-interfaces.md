@@ -60,3 +60,24 @@ HTTP消息是从客户机到服务器的请求或从服务器到客户端的响�
 从这里开始，之后的描述中命名空间 `Psr\Http\Message` 在提到这个接口的时候将会被省略。
 
 ### 1.2. HTTP头
+
+#### 不区分大小写的头字段名
+
+HTTP消息包括大小写不敏感的头字段名。头是从实现了 `MessageInterface ` 接口的类中以不区分大小写的方式获取的。例如，获取 `foo` 头与获取 `FoO` 头的返回结果是相同的。同样，设置 `Foo` 头将覆写之前的设置的 `foo` 头的值。
+
+```php
+$message = $message->withHeader('foo', 'bar');
+
+echo $message->getHeaderLine('foo');
+// Outputs: bar
+
+echo $message->getHeaderLine('FOO');
+// Outputs: bar
+
+$message = $message->withHeader('fOO', 'baz');
+echo $message->getHeaderLine('foo');
+// Outputs: baz
+```
+尽管头能被不区分大小写地获取，但原有的大小写规范 **必须** 被保留，尤其是使用 `getHeaders()` 函数来获取头的时候。
+
+不符合要求的HTTP应用程序可能依赖于一定的大小写规范，所以对于一个用户能够在创建一个请求或响应时控制HTTP报头的大小写的情况下是非常有用的。
