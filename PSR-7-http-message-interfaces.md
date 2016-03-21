@@ -50,3 +50,13 @@ This is the response body
 
 1. 规范
 --------
+
+### 1.1. 消息
+
+HTTP消息是从客户机到服务器的请求或从服务器到客户端的响应。本规范分别为其定义了对于HTTP消息的接口 `Psr\Http\Message\RequestInterface` 和 `Psr\Http\Message\ResponseInterface` 。
+
+`Psr\Http\Message\RequestInterface` 和     `Psr\Http\Message\ResponseInterface` 都继承自 `Psr\Http\Message\MessageInterface` 。而 `Psr\Http\Message\MessageInterface` **可以** 被直接实现，实现者 **应该** 实现 `Psr\Http\Message\RequestInterface` 和     `Psr\Http\Message\ResponseInterface` 。
+
+从这里开始，之后的描述中命名空间 `Psr\Http\Message` 在提到这个接口的时候将会被省略。
+
+### 1.2. HTTP头
