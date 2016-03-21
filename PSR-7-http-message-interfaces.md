@@ -42,7 +42,6 @@ This is the response body
 - [RFC 7230][]
 - [RFC 7231][]
 
-
 [RFC 2119]:http://tools.ietf.org/html/rfc2119
 [RFC 3986]:http://tools.ietf.org/html/rfc3986
 [RFC 7230]:http://tools.ietf.org/html/rfc7230
