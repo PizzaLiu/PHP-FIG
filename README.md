@@ -1,6 +1,6 @@
 PHP编码规范（中文版）导读
 ====================================
-本文档是PHP互操作性框架制定小组（[PHP-FIG][] :PHP Framework Interoperability Group）制定的PHP编码规范（[PSR][]:Proposing a Standards Recommendation）中译版。
+本文档是PHP互操作性框架制定小组（[PHP-FIG][] :PHP Framework Interoperability Group）制定的PHP编码规范（[PSR][]:PHP Standard Recommendation）中译版。
 
 翻译过程中参照了 [莫希爾(Mosil)手札][] 的繁体中文版，以及 [Corrie Zhao][] 组织翻译的简体中文版，
 译文中为了让语句通顺，便于理解，没有对原文逐字翻译，个别语句与原文原意可能略有偏差，希望告知指正。
